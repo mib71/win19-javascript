@@ -3,7 +3,7 @@
 var sentence = longestWord("I love JavaScript"); // "JavaScript"
 function longestWord(myString) {
   var wordSplit = myString.split(" ");
-  var longWord = " ";
+  var longWord = "";
   for (var i = 0; i < wordSplit.length; i++) {
     if (wordSplit[i].length > longWord.length) {
       longWord = wordSplit[i];

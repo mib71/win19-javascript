@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <span>Hello</span>
+      <p><span>World</span></p>
+      <p><span>Again</span></p>
+    </div>
+    <div>
+      <p>Test</p>
+    </div>
+    <script>
+      // Skriv kod som ändrar textfärgen till röd för de span som har texten “World” och “Again”.
+
+      const spans = document.querySelectorAll("p > span");
+      const spansArray = Array.from(spans);
+      spansArray.forEach(el => {
+        el.setAttribute("style", "color: red");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Skapa tre p taggar i JavaScript, fyll dem med lite text och lägg till dem i DOM:en på en tom sida.
+
+      const fruits = ["Apple", "Pear", "Banana"];
+
+      for (let i = 0; i < fruits.length; i++) {
+        const p = document.createElement("p");
+        p.textContent = fruits[i];
+        document.body.appendChild(p);
+      }
+    </script>
+  </body>
+</html>

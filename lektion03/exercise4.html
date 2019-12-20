@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="minKnapp">TuT</button>
+    <script>
+      // Skapa en sida med en knapp. Lägg till en event lyssnare och skriv ut ett meddelande till konsolen när vi trycker på knappen.
+
+      let myButton = document
+        .getElementById("minKnapp")
+        .addEventListener("click", onClick);
+
+      function onClick() {
+        alert("TuT");
+      }
+    </script>
+  </body>
+</html>

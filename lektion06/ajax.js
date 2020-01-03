@@ -21,7 +21,7 @@ function byId(n) {
   let req = new XMLHttpRequest();
   req.addEventListener("load", reqSingelListener);
   req.open("GET", "https://api.openbrewerydb.org/breweries/" + n);
-  req.send(); // Verkställer (sänder anriopet) req
+  req.send(); // Verkställer (sänder anropet) req
 }
 
 fetch(1);

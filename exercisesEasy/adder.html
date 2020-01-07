@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adder</title>
+  </head>
+  <body>
+    <script>
+      /** Write a program that uses the function prompt to get two different numbers from the user. You'll then alert the sum of these two numbers.This code needs to be run in a browser. */
+
+      let numberOne = prompt("Pleas enter number one: ");
+      let numberTwo = prompt("Pleas enter number two: ");
+
+      getSum(numberOne, numberTwo);
+
+      function getSum(n1, n2) {
+        if (numberOne != null && numberTwo != null) {
+          let sum = parseInt(numberOne) + parseInt(numberTwo);
+          alert(numberOne + " + " + numberTwo + " = " + sum);
+        }
+      }
+    </script>
+  </body>
+</html>

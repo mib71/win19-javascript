@@ -1,4 +1,6 @@
-/** Write a function concatenate that takes two arrays as arguments. The function should return the two arrays merged into a single array. */
+// Write a function concatenate that takes two arrays as
+// arguments. The function should return the two arrays merged
+// into a single array. */
 
 let arrayOne = [1, 2, 3];
 let arrayTwo = [4, 5, 6];

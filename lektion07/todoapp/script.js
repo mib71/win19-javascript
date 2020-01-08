@@ -38,6 +38,7 @@ function onSubmit(e) {
   const postReq = new XMLHttpRequest();
 
   postReq.open("POST", "/todos");
+  postReq.addEventListener("load", onToDoAdded);
   postReq.setRequestHeader("Content-Type", "application/json");
 
   const titleEl = document.getElementById("toDo");
@@ -45,8 +46,6 @@ function onSubmit(e) {
   const ob = { title: titleEl.value };
 
   console.log(ob);
-
-  postReq.addEventListener("load", onToDoAdded);
 
   postReq.send(JSON.stringify(ob));
 

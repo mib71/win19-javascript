@@ -1,4 +1,4 @@
-const giveMePromise = new Promise(function(resolve, reject) {
+const giveMePromise = new Promise(function(resolve) {
   setTimeout(function() {
     resolve("Hello from promise");
   }, 600);

@@ -1,6 +1,9 @@
 function fibonacci(n) {
-  n = n + (n - 1);
-  return n;
+  if (n <= 2) {
+    return 1;
+  }
+
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
-console.log(fibonacci(7));
+console.log(fibonacci(7)); // 7 -> 13

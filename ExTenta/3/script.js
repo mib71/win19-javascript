@@ -34,7 +34,7 @@ function renderTable(arr) {
   for (i = 0; i < arr.length; i++) {
     // skapa table <tr>
     let trEl = document.createElement("tr");
-    // skapa tabel <td>
+    // skapa tabel element <td>
     let tdName = document.createElement("td");
     let tdOcc = document.createElement("td");
     let tdAge = document.createElement("td");

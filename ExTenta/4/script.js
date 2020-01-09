@@ -7,6 +7,22 @@
 
 /* Implement your solution here */
 
+function renderData(arr) {
+  let ulEl = document.createElement("ul");
+  document.querySelector("main").appendChild(ulEl);
+
+  for (i = 0; i < arr.length; i++) {
+    let liEl = document.createElement("li");
+    liEl.textContent = arr[i].name;
+    ulEl.appendChild(liEl);
+  }
+}
+
+getData().then(function(list) {
+  let names = JSON.parse(list);
+  renderData(names.data);
+});
+
 /* Do NOT touch this function */
 function getData() {
   return new Promise(function(resolve, reject) {

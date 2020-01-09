@@ -12,45 +12,43 @@ function renderTable(arr) {
   let theadEl = document.createElement("thead");
   let tbodyEl = document.createElement("tbody");
   let trEl = document.createElement("tr");
-
-  tableEl.style.border = 1;
-
-  let thNameEl = document.createElement("th");
-  let thOccEl = document.createElement("th");
-  let thAgeEl = document.createElement("th");
-
-  thNameEl.textContent = "Name";
-  thOccEl.textContent = "Occupation";
-  thAgeEl.textContent = "Age";
+  let thEl = document.createElement("th");
 
   document.querySelector("main").appendChild(tableEl);
-  tableEl.appendChild(theadEl);
-  tableEl.appendChild(tbodyEl);
+  tableEl.appendChild(theadEl); // skapa thead
+  tableEl.appendChild(tbodyEl); // skapa tbody
 
-  theadEl.appendChild(trEl);
+  let thName = document.createElement("th");
+  let thOcc = document.createElement("th");
+  let thAge = document.createElement("th");
 
-  trEl.appendChild(thNameEl);
-  trEl.appendChild(thOccEl);
-  trEl.appendChild(thAgeEl);
+  thName.textContent = "Name: ";
+  thOcc.textContent = "Occupation: ";
+  thAge.textContent = "Age: ";
+
+  theadEl.appendChild(trEl); // skapa <tr>
+  trEl.appendChild(thName);
+  trEl.appendChild(thOcc);
+  trEl.appendChild(thAge);
 
   for (i = 0; i < arr.length; i++) {
-    // Skapa element
+    // skapa table <tr>
     let trEl = document.createElement("tr");
+    // skapa tabel <td>
+    let tdName = document.createElement("td");
+    let tdOcc = document.createElement("td");
+    let tdAge = document.createElement("td");
 
-    let tdNameEl = document.createElement("td");
-    let tdOccEl = document.createElement("td");
-    let tdAgeEl = document.createElement("td");
+    // hämta datan
+    tdName.textContent = arr[i].name;
+    tdOcc.textContent = arr[i].occupation;
+    tdAge.textContent = arr[i].age;
 
-    // Ge elementen ett innehåll
-    tdNameEl.textContent = arr[i].name;
-    tdOccEl.textContent = arr[i].occupation;
-    tdAgeEl.textContent = arr[i].age;
-
-    // Sätt ut elementen i DOMen
+    // rendera tabel data <td>
     tbodyEl.appendChild(trEl);
-    trEl.appendChild(tdNameEl);
-    trEl.appendChild(tdOccEl);
-    trEl.appendChild(tdAgeEl);
+    trEl.appendChild(tdName);
+    trEl.appendChild(tdOcc);
+    trEl.appendChild(tdAge);
   }
 }
 
